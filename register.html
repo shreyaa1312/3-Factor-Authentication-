@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div id="login-form-wrap">
+    <h2>Registration</h2>
+    <form method="post" action="./register.php">
+      <p>
+        <input type="text" name="username" placeholder="User Name" required><i
+          class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="tel" name="phonenumber" placeholder="Phone Number" pattern="[0-9]{10}" len="10" required><i
+          class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="email" id="email" name="email" placeholder="Email" required><i
+          class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+          required><i class="validation"><span></span><span></span></i>
+      </p>
+      <p>
+        <button type="submit" id="login" value="Register">Register</button>
+      </p>
+    </form>
+    <div id="create-account-wrap">
+      <p>Already a member? <a href="./index.html">Login</a>
+      <p>
+    </div>
+    <script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="verification.js"></script>
+    <!--create-account-wrap-->
+  </div>
+  <!--login-form-wrap-->
+  <!-- partial -->
+
+</body>
+
+</html>
